@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Seat Reservation System</h1>
+  <div>
+      <h2>Available Seats:</h2>
+      <div *ngFor="let row of rows; let rowIndex = index" class="seat-row">
+          <div *ngFor="let seat of row; let seatIndex = index" 
+               class="seat" 
+               [ngClass]="{'booked': seat, 'available': !seat}" 
+               (click)="!seat && bookSeats(1)">
+              {{ seat ? 'X' : 'O' }}
+          </div>
+      </div>
+  </div>
+  <div>
+      <input type="number" [(ngModel)]="requestedSeats" min="1" max="7" placeholder="Enter number of seats to book" />
+      <button (click)="bookSeats(requestedSeats)">Book Seats</button>
+  </div>
+  <div *ngIf="message" class="message">{{ message }}</div>
+</div>

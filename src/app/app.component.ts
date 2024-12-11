@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SeatReservationComponent } from './seat-reservation/seat-reservation.component'; // Import the standalone component
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [SeatReservationComponent] // Add the standalone component here
 })
 export class AppComponent {
   title = 'seat-reservation';

@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+ # Ignore system directories
+   Library/
+   .Trash/
+   .nvm/
+   Desktop/
+   Detection/
